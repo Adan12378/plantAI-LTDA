@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantAI — Innovación Agrícola Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========== LOADER ========== -->
+    <div id="loader">
+        <div class="loader-inner">
+            <div class="loader-leaf">
+                <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div class="loader-text">PlantAI</div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- ========== PARTÍCULAS ========== -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fa-solid fa-leaf"></i>
+                <span>Plant<span class="accent">AI</span></span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#productos" class="nav-link">Productos</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+    
+                <li><a href="#galeria" class="nav-link">Galería</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="#productos" class="nav-cta">Comprar <i class="fa-solid fa-arrow-right"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section id="inicio" class="hero">
+        <div class="hero-video-wrap">
+            <video autoplay muted loop playsinline class="hero-video" poster="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=1600&q=80">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content fade-in">
+            <div class="hero-badge"><i class="fa-solid fa-circle-check"></i> Empresa certificada en Colombia</div>
+            <h1 class="hero-title">
+                Innovación agrícola<br>
+                <span class="hero-accent">para un futuro</span><br>
+                más verde
+            </h1>
+            <p class="hero-sub">Conectamos la tecnología con la tierra. Semillas, fertilizantes, humus y bioinsumos para maximizar tu cosecha y rentabilidad.</p>
+            <div class="hero-btns">
+                <a href="#productos" class="btn-primary">Ver productos <i class="fa-solid fa-seedling"></i></a>
+                <a href="#contacto" class="btn-outline">Contactar empresa <i class="fa-solid fa-phone"></i></a>
+            </div>
+            <div class="hero-stats">
+                <div class="hstat"><span class="hstat-num">7+</span><span class="hstat-lbl">Productos</span></div>
+                <div class="hstat-div"></div>
+                <div class="hstat"><span class="hstat-num">$14M</span><span class="hstat-lbl">Ventas/mes</span></div>
+                <div class="hstat-div"></div>
+                <div class="hstat"><span class="hstat-num">38%</span><span class="hstat-lbl">Margen neto</span></div>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Descubre más</span>
+            <i class="fa-solid fa-chevron-down bounce"></i>
+        </div>
+    </section>
+
+    <!-- ========== SOBRE LA EMPRESA ========== -->
+    <section id="empresa" class="section sobre">
+        <div class="container">
+            <div class="section-badge">Quiénes somos</div>
+            <h2 class="section-title">La empresa que hace crecer <span class="accent">el campo</span></h2>
+            <p class="section-sub">PlantAI es una empresa colombiana dedicada a la comercialización de insumos agrícolas de alta calidad. Combinamos conocimiento del campo con visión empresarial moderna.</p>
+
+            <div class="sobre-grid">
+                <div class="sobre-card reveal">
+                    <div class="sobre-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3>Misión</h3>
+                    <p>Proveer insumos agrícolas de óptima calidad a agricultores colombianos, garantizando rentabilidad y sostenibilidad en cada cosecha con precios competitivos y atención personalizada.</p>
+                </div>
+                <div class="sobre-card reveal">
+                    <div class="sobre-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Visión</h3>
+                    <p>Ser la empresa líder en distribución de insumos agrícolas en la región, reconocida por la calidad de sus productos, innovación tecnológica y compromiso con el medio ambiente para 2027.</p>
+                </div>
+                <div class="sobre-card reveal">
+                    <div class="sobre-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Objetivos</h3>
+                    <p>Expandir nuestra cartera de productos, fortalecer alianzas con productores locales, digitalizar la experiencia de compra y aumentar las ventas mensuales en un 25% anual.</p>
+                </div>
+                <div class="sobre-card reveal">
+                    <div class="sobre-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Valores</h3>
+                    <p>Sostenibilidad ambiental, honestidad comercial, innovación constante, apoyo al agricultor colombiano y responsabilidad social con las comunidades rurales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRODUCTOS ========== -->
+    <section id="productos" class="section productos-section">
+        <div class="container">
+            <div class="section-badge">Catálogo</div>
+            <h2 class="section-title">Nuestros <span class="accent">productos agrícolas</span></h2>
+            <p class="section-sub">Insumos de alta calidad para maximizar el rendimiento de tus cultivos. Precios directos sin intermediarios.</p>
+
+            <div class="productos-grid">
+
+                <!-- Semillas -->
+                <div class="producto-card reveal">
+                    <div class="producto-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&q=80" alt="Semillas" class="producto-img">
+                        <div class="producto-badge">Popular</div>
+                    </div>
+                    <div class="producto-body">
+                        <div class="producto-cat"><i class="fa-solid fa-seedling"></i> Semillas</div>
+                        <h3 class="producto-name">Semillas Certificadas</h3>
+                        <p class="producto-desc">Semillas seleccionadas de alta germinación para hortalizas, granos y forrajes. Garantía de pureza varietal.</p>
+                        <div class="producto-precios">
+                            <div class="precio-item">
+                                <span class="precio-lbl">Costo</span>
+                                <span class="precio-val costo">$12.000</span>
+                            </div>
+                            <div class="precio-item">
+                                <span class="precio-lbl">Venta</span>
+                                <span class="precio-val venta">$18.000</span>
+                            </div>
+                        </div>
+                        <div class="producto-ventas">
+                            <i class="fa-solid fa-box"></i> 120 unidades/mes
+                            <span class="ganancia-badge">+$720.000/mes</span>
+                        </div>
+                        <a href="#contacto" class="btn-producto">Comprar ahora <i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+
+                <!-- Fertilizante Químico -->
+                <div class="producto-card reveal">
+                    <div class="producto-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&q=80" alt="Fertilizante Químico" class="producto-img">
+                    </div>
+                    <div class="producto-body">
+                        <div class="producto-cat"><i class="fa-solid fa-flask"></i> Química</div>
+                        <h3 class="producto-name">Fertilizante Químico</h3>
+                        <p class="producto-desc">Fórmulas NPK balanceadas para todo tipo de cultivo. Mayor rendimiento por hectárea con aplicación eficiente.</p>
+                        <div class="producto-precios">
+                            <div class="precio-item">
+                                <span class="precio-lbl">Costo</span>
+                                <span class="precio-val costo">$35.000</span>
+                            </div>
+                            <div class="precio-item">
+                                <span class="precio-lbl">Venta</span>
+                                <span class="precio-val venta">$55.000</span>
+                            </div>
+                        </div>
+                        <div class="producto-ventas">
+                            <i class="fa-solid fa-box"></i> 80 bultos/mes
+                            <span class="ganancia-badge">+$1.600.000/mes</span>
+                        </div>
+                        <a href="#contacto" class="btn-producto">Comprar ahora <i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+
+                <!-- Fertilizante Orgánico -->
+                <div class="producto-card reveal">
+                    <div class="producto-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&q=80" alt="Fertilizante Orgánico" class="producto-img">
+                        <div class="producto-badge eco">Eco</div>
+                    </div>
+                    <div class="producto-body">
+                        <div class="producto-cat"><i class="fa-solid fa-circle-check"></i> Orgánico</div>
+                        <h3 class="producto-name">Fertilizante Orgánico</h3>
+                        <p class="producto-desc">100% orgánico, mejora la estructura del suelo y aporta micronutrientes esenciales de forma sostenible.</p>
+                        <div class="producto-precios">
+                            <div class="precio-item">
+                                <span class="precio-lbl">Costo</span>
+                                <span class="precio-val costo">$28.000</span>
+                            </div>
+                            <div class="precio-item">
+                                <span class="precio-lbl">Venta</span>
+                                <span class="precio-val venta">$45.000</span>
+                            </div>
+                        </div>
+                        <div class="producto-ventas">
+                            <i class="fa-solid fa-box"></i> 60 bultos/mes
+                            <span class="ganancia-badge">+$1.020.000/mes</span>
+                        </div>
+                        <a href="#contacto" class="btn-producto">Comprar ahora <i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+
+                <!-- Humus -->
+                <div class="producto-card reveal">
+                    <div class="producto-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&q=80" alt="Humus" class="producto-img">
+                        <div class="producto-badge eco">Eco</div>
+                    </div>
+                    <div class="producto-body">
+                        <div class="producto-cat"><i class="fa-solid fa-worm"></i> Bioinsumo</div>
+                        <h3 class="producto-name">Humus de Lombriz</h3>
+                        <p class="producto-desc">Abono natural rico en nutrientes, microbios benéficos y materia orgánica. Mejora la fertilidad del suelo a largo plazo.</p>
+                        <div class="producto-precios">
+                            <div class="precio-item">
+                                <span class="precio-lbl">Costo</span>
+                                <span class="precio-val costo">$15.000</span>
+                            </div>
+                            <div class="precio-item">
+                                <span class="precio-lbl">Venta</span>
+                                <span class="precio-val venta">$25.000</span>
+                            </div>
+                        </div>
+                        <div class="producto-ventas">
+                            <i class="fa-solid fa-box"></i> 150 bultos/mes
+                            <span class="ganancia-badge">+$1.500.000/mes</span>
+                        </div>
+                        <a href="#contacto" class="btn-producto">Comprar ahora <i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+
+                <!-- Lixiviado de Lombriz -->
+                <div class="producto-card reveal">
+                    <div class="producto-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=400&q=80" alt="Lixiviado" class="producto-img">
+                        <div class="producto-badge eco">Eco</div>
+                    </div>
+                    <div class="producto-body">
+                        <div class="producto-cat"><i class="fa-solid fa-droplet"></i> Bioinsumo</div>
+                        <h3 class="producto-name">Lixiviado de Lombriz</h3>
+                        <p class="producto-desc">Extracto líquido de lombricompost, estimulante natural del crecimiento radicular y activador biológico del suelo.</p>
+                        <div class="producto-precios">
+                            <div class="precio-item">
+                                <span class="precio-lbl">Costo</span>
+                                <span class="precio-val costo">$8.000</span>
+                            </div>
+                            <div class="precio-item">
+                                <span class="precio-lbl">Venta</span>
+                                <span class="precio-val venta">$15.000</span>
+                            </div>
+                        </div>
+                        <div class="producto-ventas">
+                            <i class="fa-solid fa-box"></i> 100 litros/mes
+                            <span class="ganancia-badge">+$700.000/mes</span>
+                        </div>
+                        <a href="#contacto" class="btn-producto">Comprar ahora <i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+
+                <!-- Cal Dolomita -->
+                <div class="producto-card reveal">
+                    <div class="producto-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&q=80" alt="Cal Dolomita" class="producto-img">
+                    </div>
+                    <div class="producto-body">
+                        <div class="producto-cat"><i class="fa-solid fa-mountain"></i> Mineral</div>
+                        <h3 class="producto-name">Cal Dolomita</h3>
+                        <p class="producto-desc">Corrector de pH del suelo con aporte de calcio y magnesio. Indispensable para cultivos exigentes en suelos ácidos.</p>
+                        <div class="producto-precios">
+                            <div class="precio-item">
+                                <span class="precio-lbl">Costo</span>
+                                <span class="precio-val costo">$18.000</span>
+                            </div>
+                            <div class="precio-item">
+                                <span class="precio-lbl">Venta</span>
+                                <span class="precio-val venta">$30.000</span>
+                            </div>
+                        </div>
+                        <div class="producto-ventas">
+                            <i class="fa-solid fa-box"></i> 90 bultos/mes
+                            <span class="ganancia-badge">+$1.080.000/mes</span>
+                        </div>
+                        <a href="#contacto" class="btn-producto">Comprar ahora <i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+
+                <!-- Micorrizas -->
+                <div class="producto-card reveal featured-product">
+                    <div class="producto-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=400&q=80" alt="Micorrizas" class="producto-img">
+                        <div class="producto-badge premium">Premium</div>
+                    </div>
+                    <div class="producto-body">
+                        <div class="producto-cat"><i class="fa-solid fa-bacteria"></i> Bioestimulante</div>
+                        <h3 class="producto-name">Micorrizas</h3>
+                        <p class="producto-desc">Hongos simbióticos que amplifican la absorción de nutrientes y agua. Aumentan resistencia a sequías y enfermedades radiculares.</p>
+                        <div class="producto-precios">
+                            <div class="precio-item">
+                                <span class="precio-lbl">Costo</span>
+                                <span class="precio-val costo">$22.000</span>
+                            </div>
+                            <div class="precio-item">
+                                <span class="precio-lbl">Venta</span>
+                                <span class="precio-val venta">$40.000</span>
+                            </div>
+                        </div>
+                        <div class="producto-ventas">
+                            <i class="fa-solid fa-box"></i> 70 kg/mes
+                            <span class="ganancia-badge">+$1.260.000/mes</span>
+                        </div>
+                        <a href="#contacto" class="btn-producto">Comprar ahora <i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICIOS ========== -->
+    <section id="servicios" class="section servicios-section">
+        <div class="container">
+            <div class="section-badge">Servicios</div>
+            <h2 class="section-title">Más que productos, <span class="accent">soluciones completas</span></h2>
+            <div class="servicios-grid">
+                <div class="servicio-item reveal">
+                    <div class="servicio-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>Entrega a domicilio</h3>
+                    <p>Llevamos tus insumos hasta la finca o punto de acopio en toda la región.</p>
+                </div>
+                <div class="servicio-item reveal">
+                    <div class="servicio-icon"><i class="fa-solid fa-microscope"></i></div>
+                    <h3>Análisis de suelos</h3>
+                    <p>Interpretamos resultados de laboratorio y recomendamos el plan nutricional ideal.</p>
+                </div>
+                <div class="servicio-item reveal">
+                    <div class="servicio-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3>Asesoría técnica</h3>
+                    <p>Expertos agrónomos disponibles para visitas técnicas y recomendaciones personalizadas.</p>
+                </div>
+                <div class="servicio-item reveal">
+                    <div class="servicio-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h3>Crédito a agricultores</h3>
+                    <p>Facilidades de pago y planes de crédito para pequeños y medianos agricultores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ESTADÍSTICAS ========== -->
+    
+    <!-- ========== GALERÍA ========== -->
+    <section id="galeria" class="section galeria-section">
+        <div class="container">
+            <div class="section-badge">Multimedia</div>
+            <h2 class="section-title">Galería <span class="accent">agrícola</span></h2>
+            <p class="section-sub">Imágenes reales de nuestros productos, cultivos y el campo colombiano.</p>
+
+            <div class="galeria-grid">
+                <div class="gal-item big reveal">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" alt="Cultivo verde">
+                    <div class="gal-overlay"><span>Cultivos de alto rendimiento</span></div>
+                </div>
+                <div class="gal-item reveal">
+                    <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=400&q=80" alt="Agricultor">
+                    <div class="gal-overlay"><span>Agricultores colombianos</span></div>
+                </div>
+                <div class="gal-item reveal">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&q=80" alt="Semillas">
+                    <div class="gal-overlay"><span>Semillas certificadas</span></div>
+                </div>
+                <div class="gal-item reveal">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&q=80" alt="Fertilizante">
+                    <div class="gal-overlay"><span>Fertilizantes de calidad</span></div>
+                </div>
+                <div class="gal-item reveal">
+                    <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=400&q=80" alt="Campo">
+                    <div class="gal-overlay"><span>El campo, nuestra pasión</span></div>
+                </div>
+                <div class="gal-item reveal">
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&q=80" alt="Cosecha">
+                    <div class="gal-overlay"><span>Cosechas abundantes</span></div>
+                </div>
+            </div>
+
+            <!-- Video YouTube -->
+            <div class="video-section reveal">
+                <h3>Agricultura moderna con tecnología</h3>
+                <div class="video-wrap">
+                    <iframe
+                        src="2026-05-21_22-39-03_Lumina.mp4"
+                        title="Agricultura moderna"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RENTABILIDAD ========== -->
+    <section id="rentabilidad" class="section rentabilidad-section">
+        <div class="container">
+            <div class="section-badge">¿Por qué invertir?</div>
+            <h2 class="section-title">Por qué PlantAI <span class="accent">es rentable</span></h2>
+
+            <div class="rent-grid">
+                <div class="rent-timeline">
+                    <div class="timeline-item reveal">
+                        <div class="tl-dot"><i class="fa-solid fa-1"></i></div>
+                        <div class="tl-content">
+                            <h4>Demanda constante</h4>
+                            <p>Los insumos agrícolas tienen demanda todo el año. La alimentación no para y los cultivos siempre necesitan nutrición.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="tl-dot"><i class="fa-solid fa-2"></i></div>
+                        <div class="tl-content">
+                            <h4>Margen sólido del 38%</h4>
+                            <p>Con márgenes superiores al promedio del sector, cada peso invertido genera retornos sostenibles y predecibles.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="tl-dot"><i class="fa-solid fa-3"></i></div>
+                        <div class="tl-content">
+                            <h4>Diversificación de productos</h4>
+                            <p>7 líneas de productos complementarias reducen el riesgo. Si un mercado cae, los demás compensan.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="tl-dot"><i class="fa-solid fa-4"></i></div>
+                        <div class="tl-content">
+                            <h4>Mercado en crecimiento</h4>
+                            <p>El sector agro-insumos en Colombia crece al 8% anual. PlantAI está posicionada para capturar esa expansión.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="tl-dot"><i class="fa-solid fa-5"></i></div>
+                        <div class="tl-content">
+                            <h4>Baja probabilidad de pérdida</h4>
+                            <p>Modelo de negocio probado, sin inventarios perecederos de alto riesgo y con clientes fidelizados recurrentes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rent-cards">
+                    <div class="rent-card reveal">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h4>Riesgo controlado</h4>
+                        <p>Productos esenciales con demanda inelástica. Las crisis no afectan significativamente el consumo de insumos básicos.</p>
+                    </div>
+                    <div class="rent-card reveal">
+                        <i class="fa-solid fa-rocket"></i>
+                        <h4>Escalabilidad</h4>
+                        <p>Fácil expansión geográfica y de catálogo. El modelo funciona en cualquier municipio con actividad agrícola.</p>
+                    </div>
+                    <div class="rent-card highlight reveal">
+                        <i class="fa-solid fa-coins"></i>
+                        <h4>$69.6M anuales</h4>
+                        <p>Proyección de ganancia neta al año con operación actual. Escalar al doble duplica el resultado proporcionalmente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIOS ========== -->
+    <section class="section testimonios-section">
+        <div class="container">
+            <div class="section-badge">Clientes</div>
+            <h2 class="section-title">Lo que dicen <span class="accent">nuestros agricultores</span></h2>
+            <div class="testimonios-grid">
+                <div class="testi-card reveal">
+                    <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Las micorrizas de PlantAI transformaron mis cultivos de cebolla. Menos enfermedades, más tamaño y mejor precio en plaza. Increíble producto."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">JR</div>
+                        <div>
+                            <strong>Jorge Ramírez</strong>
+                            <span>Agricultor, Nariño</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card reveal">
+                    <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Compré humus y lixiviado y los resultados en mis tomates fueron notables desde la primera aplicación. El servicio al cliente es excelente."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">MC</div>
+                        <div>
+                            <strong>María Castillo</strong>
+                            <span>Productora, Boyacá</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card reveal">
+                    <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+                    <p>"Llevo 8 meses comprando fertilizantes en PlantAI. Precios justos, entrega puntual y asesoría técnica que realmente funciona. Los recomiendo."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">AP</div>
+                        <div>
+                            <strong>Andrés Pedraza</strong>
+                            <span>Caficultor, Huila</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MINI DASHBOARD ========== -->
+    <section class="section dashboard-section">
+        <div class="container">
+            <div class="section-badge">Admin</div>
+            <h2 class="section-title">Panel de <span class="accent">control visual</span></h2>
+            <div class="dashboard-grid">
+                <div class="dash-card reveal">
+                    <div class="dash-header">
+                        <span class="dash-title">Resumen mensual</span>
+                        <span class="dash-tag live"><i class="fa-solid fa-circle"></i> Live</span>
+                    </div>
+                    <div class="dash-metrics">
+                        <div class="dm-row">
+                            <span>Inversión total</span>
+                            <span class="dm-val red">$8.880.000</span>
+                        </div>
+                        <div class="dm-row">
+                            <span>Ventas totales</span>
+                            <span class="dm-val green">$14.680.000</span>
+                        </div>
+                        <div class="dm-row">
+                            <span>Ganancia neta</span>
+                            <span class="dm-val gold">$5.800.000</span>
+                        </div>
+                        <div class="dm-row">
+                            <span>Margen</span>
+                            <span class="dm-val green">38%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-card reveal">
+                    <div class="dash-header">
+                        <span class="dash-title">Top productos</span>
+                    </div>
+                    <div class="top-prod-list">
+                        <div class="tp-item">
+                            <span class="tp-rank gold">1</span>
+                            <span class="tp-name">Fertilizante Químico</span>
+                            <span class="tp-val">$1.600.000</span>
+                        </div>
+                        <div class="tp-item">
+                            <span class="tp-rank silver">2</span>
+                            <span class="tp-name">Humus de Lombriz</span>
+                            <span class="tp-val">$1.500.000</span>
+                        </div>
+                        <div class="tp-item">
+                            <span class="tp-rank bronze">3</span>
+                            <span class="tp-name">Micorrizas</span>
+                            <span class="tp-val">$1.260.000</span>
+                        </div>
+                        <div class="tp-item">
+                            <span class="tp-rank">4</span>
+                            <span class="tp-name">Cal Dolomita</span>
+                            <span class="tp-val">$1.080.000</span>
+                        </div>
+                        <div class="tp-item">
+                            <span class="tp-rank">5</span>
+                            <span class="tp-name">Fertilizante Orgánico</span>
+                            <span class="tp-val">$1.020.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-card reveal tall">
+                    <div class="dash-header">
+                        <span class="dash-title">Proyección anual</span>
+                    </div>
+                    <div class="chart-bars">
+                        <div class="cb-bar"><div class="cb-fill" style="height:65%"></div><span>Ene</span></div>
+                        <div class="cb-bar"><div class="cb-fill" style="height:72%"></div><span>Feb</span></div>
+                        <div class="cb-bar"><div class="cb-fill" style="height:68%"></div><span>Mar</span></div>
+                        <div class="cb-bar"><div class="cb-fill" style="height:80%"></div><span>Abr</span></div>
+                        <div class="cb-bar"><div class="cb-fill" style="height:75%"></div><span>May</span></div>
+                        <div class="cb-bar"><div class="cb-fill active" style="height:88%"></div><span>Jun</span></div>
+                        <div class="cb-bar"><div class="cb-fill" style="height:85%"></div><span>Jul</span></div>
+                        <div class="cb-bar"><div class="cb-fill" style="height:90%"></div><span>Ago</span></div>
+                        <div class="cb-bar"><div class="cb-fill" style="height:82%"></div><span>Sep</span></div>
+                        <div class="cb-bar"><div class="cb-fill" style="height:95%"></div><span>Oct</span></div>
+                        <div class="cb-bar"><div class="cb-fill" style="height:92%"></div><span>Nov</span></div>
+                        <div class="cb-bar"><div class="cb-fill" style="height:100%"></div><span>Dic</span></div>
+                    </div>
+                    <div class="chart-label">Ganancia mensual proyectada (miles de $)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section id="contacto" class="section contacto-section">
+        <div class="container">
+            <div class="section-badge">Contáctenos</div>
+            <h2 class="section-title">Hablemos de <span class="accent">tu cosecha</span></h2>
+
+            <div class="contacto-grid">
+                <!-- Info -->
+                <div class="contacto-info reveal">
+                    <h3>Información empresarial</h3>
+                    <div class="ci-item">
+                        <i class="fa-solid fa-building"></i>
+                        <div>
+                            <strong>Empresa</strong>
+                            <span>PlantAI LTDA</span>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <i class="fa-solid fa-id-card"></i>
+                        <div>
+                            <strong>NIT</strong>
+                            <span>901.234.567-1</span>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <div>
+                            <strong>Representante legal</strong>
+                            <span>Eduardo Cesar Adan Marchan</span>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Dirección</strong>
+                            <span>CL 20#82 - 52 fontibon</span>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Teléfono</strong>
+                            <span>+57 320 4947565</span>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Correo</strong>
+                            <span>plantaicultivamos@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <!-- Mapa embebido -->
+                    <div class="mapa-wrap">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.7488!2d-74.0721!3d4.7110!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b01d8fd0001%3A0x1234567890abcdef!2sColombia!5e0!3m2!1ses!2sco!4v1234567890"
+                            allowfullscreen loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="contacto-form-wrap reveal">
+                    <div class="contacto-form">
+                        <h3>Envíanos un mensaje</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nombre completo</label>
+                                <input type="text" placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label>Empresa / Finca</label>
+                                <input type="text" placeholder="Nombre de tu empresa">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Correo electrónico</label>
+                                <input type="email" placeholder="correo@ejemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Teléfono</label>
+                                <input type="tel" placeholder="+57 300 000 0000">
+                            </div>
+                        </div>
+                        <div class="form-group full">
+                            <label>Producto de interés</label>
+                            <select>
+                                <option value="">Selecciona un producto</option>
+                                <option>Semillas certificadas</option>
+                                <option>Fertilizante químico</option>
+                                <option>Fertilizante orgánico</option>
+                                <option>Humus de lombriz</option>
+                                <option>Lixiviado de lombriz</option>
+                                <option>Cal dolomita</option>
+                                <option>Micorrizas</option>
+                                <option>Asesoría técnica</option>
+                            </select>
+                        </div>
+                        <div class="form-group full">
+                            <label>Mensaje</label>
+                            <textarea placeholder="Cuéntanos sobre tu cultivo y qué necesitas..."></textarea>
+                        </div>
+                        <button class="btn-submit" onclick="alert('¡Mensaje enviado! Nos contactaremos pronto.')">
+                            Enviar mensaje <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-leaf"></i>
+                        Plant<span>AI</span>
+                    </div>
+                    <p>Empresa colombiana dedicada a proveer insumos agrícolas de calidad premium para agricultores que buscan maximizar su rentabilidad.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Productos</h4>
+                    <ul>
+                        <li><a href="#productos">Semillas certificadas</a></li>
+                        <li><a href="#productos">Fertilizante químico</a></li>
+                        <li><a href="#productos">Fertilizante orgánico</a></li>
+                        <li><a href="#productos">Humus de lombriz</a></li>
+                        <li><a href="#productos">Lixiviado de lombriz</a></li>
+                        <li><a href="#productos">Cal dolomita</a></li>
+                        <li><a href="#productos">Micorrizas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#empresa">Sobre nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#estadisticas">Estadísticas</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#rentabilidad">Rentabilidad</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">NIT: 901.234.567-8</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Política de devoluciones</a></li>
+                    </ul>
+                    <div class="footer-cert">
+                        <i class="fa-solid fa-award"></i>
+                        <span>Empresa certificada ICA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 PlantAI LTDA — Todos los derechos reservados. Hecho en Colombia 🇨🇴</p>
+                <p>Innovación agrícola para un futuro más verde</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/573104567890?text=Hola%20PlantAI!%20Me%20interesa%20conocer%20sus%20productos." class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="wa-tooltip">¡Chatea con nosotros!</span>
+    </a>
+
+    <!-- Back to top -->
+    <button class="back-top" id="back-top" aria-label="Subir al inicio">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+    // ======== LOADER ========
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
+        setTimeout(() => { loader.classList.add('hidden'); }, 1800);
+    });
+
+    // ======== NAVBAR SCROLL ========
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+        document.getElementById('back-top').classList.toggle('visible', window.scrollY > 400);
+    });
+    document.getElementById('back-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ======== HAMBURGER ========
+    document.getElementById('hamburger').addEventListener('click', () => {
+        document.getElementById('nav-links').classList.toggle('open');
+        document.getElementById('hamburger').classList.toggle('active');
+    });
+
+    // ======== SMOOTH SCROLL ========
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            document.getElementById('nav-links').classList.remove('open');
+        });
+    });
+
+    // ======== REVEAL ON SCROLL ========
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    // ======== CONTADORES KPI ========
+    function animateCounter(el) {
+        const target = parseInt(el.dataset.target);
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(timer); }
+            el.textContent = '$' + Math.floor(current).toLocaleString('es-CO');
+        }, 16);
+    }
+    const kpiObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting && !e.target.dataset.animated) {
+                e.target.dataset.animated = 'true';
+                animateCounter(e.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.kpi-val[data-target]').forEach(el => kpiObserver.observe(el));
+
+    // ======== BARRAS ANIMADAS ========
+    const barraObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.querySelectorAll('.barra-fill').forEach(b => {
+                    b.style.width = b.dataset.width + '%';
+                });
+            }
+        });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.barras-section').forEach(el => barraObserver.observe(el));
+
+    // ======== PARTÍCULAS ========
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    class Particle {
+        constructor() { this.reset(); }
+        reset() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 3 + 1;
+            this.speedX = (Math.random() - 0.5) * 0.4;
+            this.speedY = -Math.random() * 0.5 - 0.2;
+            this.opacity = Math.random() * 0.3 + 0.05;
+        }
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            if (this.y < -10) this.reset();
+        }
+        draw() {
+            ctx.save();
+            ctx.globalAlpha = this.opacity;
+            ctx.fillStyle = '#7EC845';
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+        }
+    }
+    for (let i = 0; i < 60; i++) particles.push(new Particle());
+    function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+    </script>
+</body>
+</html>
